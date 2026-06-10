@@ -11,3 +11,24 @@ __pycache__/
 *.fls
 *.fdb_latexmk
 *.synctex.gz
+
+# Windows/WSL downloaded-file metadata artifacts
+*:Zone.Identifier*
+
+# Windows/WSL downloaded-file metadata artifacts
+*:Zone.Identifier*
+
+# Python build metadata
+*.egg-info/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# LaTeX build intermediates
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
