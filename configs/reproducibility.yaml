@@ -1,0 +1,7 @@
+project: non_markovian_gravitational_collapse
+status: frozen_validation_snapshot
+notes: |
+  This config records the frozen manuscript validation outputs. The scripts in
+  scripts/reproduce_results.py regenerate tables and figures from these values.
+  The manuscript explicitly treats all detector/network tests as synthetic and
+  all GRHD material as implementation architecture, not a completed full solver.

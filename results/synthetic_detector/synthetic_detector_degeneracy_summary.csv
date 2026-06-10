@@ -1,0 +1,2 @@
+mean_nonzero_template_overlap,min_nonzero_template_overlap,max_nonzero_template_overlap,mean_null_vs_memory_overlap,max_null_vs_memory_overlap,selection_accuracy,mean_delta_snr_injected_minus_null
+0.998939,0.997238,0.999922,7.7e-05,0.000723,1.0,11.99887

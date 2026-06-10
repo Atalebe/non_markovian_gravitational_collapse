@@ -1,0 +1,7 @@
+run:
+  name: synthetic_network_snr_threshold_scan
+network:
+  detectors: [H1, L1, V1]
+  target_snr_grid: [3, 5, 8, 10, 12, 15]
+  n_trials_per_grid_point: 200
+scope: synthetic validation only, not a real detector forecast

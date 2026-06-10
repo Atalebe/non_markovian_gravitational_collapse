@@ -1,0 +1,116 @@
+Metadata-Version: 2.4
+Name: non-markovian-grav-collapse
+Version: 0.2.0
+Summary: Reproducibility package for non-Markovian gravitational collapse validation diagnostics
+Author: Stephen Atalebe
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: pyyaml
+Dynamic: license-file
+
+# Non-Markovian Gravitational Collapse
+
+**Structural memory, wave emission, and recoverability loss**
+
+This repository contains the manuscript source and reproducibility artifacts for:
+
+> Stephen Atalebe, *Non-Markovian Gravitational Collapse: Structural Memory, Wave Emission, and Recoverability Loss*.
+
+The paper develops a source-side non-Markovian framework for gravitational collapse. The claim is deliberately narrow: gravitational-wave propagation is not modified. Instead, the effective source state may be incomplete if prior compression history is omitted.
+
+## What this repository contains
+
+The repository is organized as a reviewer-facing reproducibility package.
+
+```text
+paper/                  LaTeX manuscript source, references, and manuscript figures
+src/nmgc/               Python package containing frozen validation diagnostics
+scripts/                Reproducibility scripts for tables and figures
+configs/                Frozen validation configuration records
+results/                Generated CSV tables after running the pipeline
+docs/                   Rendered manuscript PDF and supplementary notes
+.github/workflows/      Continuous-integration checks
+```
+
+## Main validation results
+
+The scalar validation uses an exact matched-state protocol. Smooth and bursty collapse histories are reset at `t_star` to identical instantaneous values of `R`, `dR/dt`, and `A`, while retained memory is not reset.
+
+Key manuscript diagnostics:
+
+| Diagnostic | Value |
+|---|---:|
+| `delta_match_after_reset` | `0.0` |
+| `delta_M_at_tstar` | `4.839e-03` |
+| Markovian residual norm, `lambda_mem = 0` | `2.100e-10` |
+| Memory residual norm, `lambda_mem = 0.20` | `9.439e-04` |
+| Amplification over Markovian null | `4.49e06` |
+
+Synthetic detector and network tests show memory-on versus memory-off separability under the adopted toy colored-noise assumptions. These are **not** real LIGO/Virgo/KAGRA sensitivity forecasts.
+
+## Quick reproduction
+
+Create an environment and regenerate the paper tables/figures:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -U pip
+python -m pip install -r requirements.txt
+make reproduce
+```
+
+This writes result tables into `results/` and regenerates figures into `paper/figures/`.
+
+To compile the manuscript locally:
+
+```bash
+make paper
+```
+
+If a full TeX installation is not available, use the included compiled PDF at:
+
+```text
+paper/main.pdf
+```
+
+## Reviewer notes
+
+The repository is intended to make the manuscript claims auditable:
+
+1. The toy model is scalar and dimensionless.
+2. The detector and network tests use synthetic colored noise and controlled antenna factors.
+3. The `3+1` GRHD section is an implementation architecture, not a completed numerical-relativity solver.
+4. The detector tests separate memory-on from memory-off, but the present scalar waveform family does not precisely estimate `lambda_mem` because nonzero-memory templates are nearly degenerate.
+
+## Reproducibility tokens
+
+The manuscript maps notation to code/output tokens as follows:
+
+| Manuscript notation | CSV/code token |
+|---|---|
+| `delta_match` | `delta_match_after_reset` |
+| `Delta M_coll(t_star)` | `delta_M_at_tstar` |
+| `R_h` | `post_delta_h_norm` |
+| memory-minus-null network contrast | `mean_delta_network_rho` |
+
+## GitHub setup
+
+For a fresh remote repository:
+
+```bash
+git init
+git branch -M main
+git remote add origin git@github.com:Atalebe/non_markovian_gravitational_collapse.git
+git add .
+git commit -m "Initial reproducibility snapshot for non-Markovian gravitational collapse"
+git push -u origin main
+```
+
+## Citation
+
+Use the metadata in `CITATION.cff` after the repository is public. Update the DOI if the repository is archived on Zenodo.

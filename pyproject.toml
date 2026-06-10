@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "non-markovian-grav-collapse"
+version = "0.2.0"
+description = "Reproducibility package for non-Markovian gravitational collapse validation diagnostics"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Stephen Atalebe" }]
+dependencies = ["numpy", "pandas", "matplotlib", "pyyaml"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

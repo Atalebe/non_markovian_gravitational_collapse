@@ -1,0 +1,18 @@
+run:
+  name: toy_model_amplified_history
+  t_star: 40.0
+  t_end: 80.0
+model:
+  gamma: 0.18
+  omega: 0.65
+  mu: 0.018
+  eps_R: 0.08
+  core_kappa: 0.012
+  tau_M: 10.0
+  beta: 4.0
+  eta: 0.4
+  lambda_grid: [0.0, 0.02, 0.05, 0.10, 0.20]
+outputs:
+  key_memory_contrast: 4.839245922857761e-3
+  markovian_residual_norm: 2.1001394719363178e-10
+  max_lambda_residual_norm: 9.438717273359079e-4

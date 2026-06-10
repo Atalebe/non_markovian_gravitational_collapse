@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the manuscript and repository."
+title: "Non-Markovian Gravitational Collapse: Structural Memory, Wave Emission, and Recoverability Loss"
+authors:
+  - family-names: Atalebe
+    given-names: Stephen
+repository-code: "https://github.com/Atalebe/non_markovian_gravitational_collapse"
+version: "0.2.0"
+date-released: "2026-06-10"
+license: "MIT"
