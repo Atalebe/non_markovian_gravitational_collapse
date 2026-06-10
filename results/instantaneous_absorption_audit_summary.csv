@@ -1,0 +1,2 @@
+n_rows,max_delta_match_after_reset,delta_M_at_tstar,max_delta_acc_memory_term,max_post_delta_h_norm,slope_Rh_vs_lambda_deltaM,r2_Rh_vs_lambda_deltaM,interpretation
+5,0.0,0.0048392459228577,0.00096784918457154,0.0009438717273359,0.9732708621041701,0.9999629178677961,Matched instantaneous variables alone cannot explain the residual; a post-coupling acceleration variable can absorb it because it is equivalent to including lambda_mem times the retained memory contrast.

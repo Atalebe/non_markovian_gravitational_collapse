@@ -23,3 +23,7 @@ test:
 
 clean:
 	rm -rf results/*.csv results/synthetic_detector results/multidetector paper/*.aux paper/*.log paper/*.out
+
+absorption_audit:
+	PYTHONPATH=src python scripts/reproduce_results.py --tables
+	python scripts/12_instantaneous_absorption_audit.py
