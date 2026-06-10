@@ -1,5 +1,8 @@
 # Non-Markovian Gravitational Collapse
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20622873.svg)](https://doi.org/10.5281/zenodo.20622873)
+
+
 **Structural memory, wave emission, and recoverability loss**
 
 This repository contains the manuscript source and reproducibility artifacts for:
@@ -100,3 +103,14 @@ git push -u origin main
 ## Citation
 
 Use the metadata in `CITATION.cff` after the repository is public. Update the DOI if the repository is archived on Zenodo.
+
+## Archived release
+
+The initial reproducibility snapshot is archived on Zenodo:
+
+- DOI: [10.5281/zenodo.20622873](https://doi.org/10.5281/zenodo.20622873)
+- Version: `v1.0.0`
+- Repository: `Atalebe/non_markovian_gravitational_collapse`
+
+Use this DOI when citing the exact reproducibility snapshot used for the manuscript.
+

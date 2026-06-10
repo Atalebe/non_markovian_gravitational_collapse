@@ -5,6 +5,8 @@ authors:
   - family-names: Atalebe
     given-names: Stephen
 repository-code: "https://github.com/Atalebe/non_markovian_gravitational_collapse"
-version: "0.2.0"
+version: 1.0.0
 date-released: "2026-06-10"
 license: "MIT"
+doi: 10.5281/zenodo.20622873
+url: https://doi.org/10.5281/zenodo.20622873
