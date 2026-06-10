@@ -35,3 +35,7 @@ The initial reproducibility snapshot is archived on Zenodo:
 - Version: v1.0.0
 
 This DOI should be used when citing the exact code, configuration files, frozen tables, and manuscript figures associated with the initial release.
+
+## Note on regenerated figure files
+
+Running `make reproduce` regenerates manuscript figures in `paper/figures/`. Depending on the local Matplotlib, font, and PDF backend versions, regenerated PNG or PDF files may differ at the binary level even when the plotted numerical content is unchanged. The primary numerical reproducibility checks are the CSV tables in `results/` and the smoke-test targets in `make test`.
